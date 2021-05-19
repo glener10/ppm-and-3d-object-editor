@@ -1,4 +1,0 @@
-cara.obj 3 6 6 0 0.7 0.3
-elephant.obj 0.8 -4 -4 0.4 0.4 0.1
-vicviper.obj 0.4 8 -5 0.5 0.5 0.5
-mao.obj 0.1 -1 8 0 0.7 0.2
