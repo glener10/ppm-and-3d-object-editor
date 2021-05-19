@@ -3,13 +3,17 @@ Editor of .ppm files that can perform several functions and also represent 3D ob
 
 # Some Functions
 
+__3D Object in 2D image__
+
+<img src="/img/README/3d2d.jpg" alt="3d2d"/>
+
 __Blur__
 
-<img src="/img/README/blur.ppm" alt="Blur"/>
+<img src="/img/README/blur.jpg" alt="Blur"/>
 
 __Negative Image__
 
-<img src="/img/README/negative.ppm" alt="negative"/>
+<img src="/img/README/negative.jpg" alt="negative"/>
 
 __Glut__ (You can move the camera on the stage using the keys (W, A, S, D, Q and E))
 
@@ -19,9 +23,9 @@ __Glut__ (You can move the camera on the stage using the keys (W, A, S, D, Q and
 
 __Stamping__
 
-<img src="/img/README/Stamping.ppm" alt="Stamping"/>
+<img src="/img/README/stamping.jpg" alt="Stamping"/>
 
-# Dpendencies
+# Dependencies
 
 sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev mesa-utils freeglut3 libglew-dev
 
