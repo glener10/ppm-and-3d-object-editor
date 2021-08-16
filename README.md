@@ -11,8 +11,8 @@ Table of Contents
 * [Examples](#Examples)
 * [Environment](#Environment)
 * [Prerequisites](#Prerequisites)
-* [Convert .jpeg,.png,etc in .ppm](#Convert .jpeg,.png,etc in .ppm)
-* [Remove color, textures and normals from the object (.obj)](#Remove color, textures and normals from the object (.obj))
+* [Convert .jpeg,.png,etc in .ppm](#Convert)
+* [Remove color, textures and normals from the object (.obj)](#Remove)
 
 
 <!--te-->
@@ -71,7 +71,7 @@ $ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev mesa-utils
 To convert .jpeg,.png,etc in .PPM
 
 ```bash
-$ Sudo apt-get install imagemagick
+$ sudo apt-get install imagemagick
 
 $ convert image.jpg out.ppm
 ```
