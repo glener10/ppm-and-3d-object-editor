@@ -1,7 +1,26 @@
-# PPM-Editor
-Editor of .ppm files that can perform several functions and also represent 3D objects (.obj) in a 2D image.
+<h1 align="center">PPM and 3D Object (.obj) Editor</h1>
 
-# Some Functions
+<p align="center"> 🚀 Editor of .ppm files that can perform several functions and also represent 3D objects (.obj) in a 2D image. </p>
+
+
+Table of Contents
+
+===================
+
+<!--ts-->
+* [Examples](#Examples)
+* [Environment](#Environment)
+* [Prerequisites](#Prerequisites)
+* [Convert .jpeg,.png,etc in .ppm](#Convert .jpeg,.png,etc in .ppm)
+* [Remove color, textures and normals from the object (.obj)](#Remove color, textures and normals from the object (.obj))
+
+
+<!--te-->
+
+===================
+
+
+# Examples
 
 __3D Object in 2D image__
 
@@ -25,33 +44,45 @@ __Stamping__
 
 <img src="/img/README/stamping.jpg" alt="Stamping"/>
 
-# Dependencies
 
-sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev mesa-utils freeglut3 libglew-dev
+# Environment
+
+Execution environment used and tested:
+
+**SO**: Ubuntu 20.04     **Kernel**: 5.8.0-63-generic
 
 
-# Execute:
 
-1- ./make
 
-2- 
+# Prerequisites
 
-./make run   
+Before starting, you will need to have the following tools installed on your machine:
 
-OR
+* [OpenGL](https://www.opengl.org/)
 
-cd bin && ./output
 
-# TO CONVERT .jpeg,.png,etc in .PPM:
+```bash
+#Install Dependencies
+$ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev mesa-utils freeglut3 libglew-dev
+```
 
-1-Sudo apt-get install imagemagick
+# Convert .jpeg,.png,etc in .ppm
 
-2-convert image.jpg out.ppm
+To convert .jpeg,.png,etc in .PPM
 
-# TO REMOVE COLOR, TEXTURES AND NORMALS FROM THE OBJECT .obj:
+```bash
+$ Sudo apt-get install imagemagick
 
-1- sudo apt-get install openctm-tools
+$ convert image.jpg out.ppm
+```
 
-2- ctmconv input.obj output.obj --no-normals --no-texcoords --no-colors
+# Remove color, textures and normals from the object (.obj)
 
-3- Open file and replace all occurrences of "//" with nothing ""
+```bash
+$ sudo apt-get install openctm-tools
+
+$ ctmconv input.obj output.obj --no-normals --no-texcoords --no-colors
+```
+
+Open file and replace all occurrences of "//" with nothing ""
+
