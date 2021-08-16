@@ -13,6 +13,7 @@ Table of Contents
 * [Prerequisites](#Prerequisites)
 * [Convert .jpeg,.png,etc in .ppm](#Convert)
 * [Remove color, textures and normals from the object (.obj)](#Remove)
+* [Execute](#Execute)
 
 
 <!--te-->
@@ -86,3 +87,11 @@ $ ctmconv input.obj output.obj --no-normals --no-texcoords --no-colors
 
 Open file and replace all occurrences of "//" with nothing ""
 
+
+# Execute
+
+```bash
+$ make
+
+$ make run
+```
