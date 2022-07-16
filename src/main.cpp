@@ -1,4 +1,4 @@
-// (C) 2021 Glener Lanes Pizzolato
+// (C) 2021 Glener Lanes Pizzolato - glenerpizzolato@gmail.com
 
 #include "glut.h"
 #include "read_obj.h"

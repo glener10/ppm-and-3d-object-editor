@@ -1,7 +1,6 @@
 #include "image.h"
 
 
-//Load, Save, alocation, etc
 
 Image::Image(){}
 Image::~Image(){

@@ -1,6 +1,5 @@
 #include "image.h"
 
-//FUNCTIONS
 
 void Image::gradient(){
     int r,g,b;
@@ -39,7 +38,7 @@ void Image::blur(){
        }
     }
     int newred=0,newgreen=0,newblue=0;
-    for(int i=1;i < this->height - 2;i++){          //i -> 
+    for(int i=1;i < this->height - 2;i++){         
         for(int j=1;j < this->width - 2;j++){
            newred = 0;
            newgreen = 0;

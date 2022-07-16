@@ -98,7 +98,7 @@ void Object::ordena_f(){
     }
 }
 
-float Object::cat_d(){          //Pega o menor Z existente e soma um valor arbitrario (3)
+float Object::cat_d(){          
     float out = 99999;
     for(int i=0;i<this->NV;i++){
         if(this->VV[i].z < out){
