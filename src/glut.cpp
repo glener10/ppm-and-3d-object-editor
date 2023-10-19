@@ -38,14 +38,14 @@ void initflat(void){
     glClearColor (1.0, 1.0, 1.0, 1.0);
     glShadeModel (GL_FLAT);
     glShadeModel(GL_SMOOTH);
-    glFrontFace(GL_CW);    //
-    glCullFace(GL_FRONT);    //  Estas tres fazem o culling funcionar
-    glEnable(GL_CULL_FACE); //
-    glClearDepth(100.0f);  ///*******
-    glEnable(GL_DEPTH_TEST);  ///*******
+    glFrontFace(GL_CW);    
+    glCullFace(GL_FRONT);    
+    glEnable(GL_CULL_FACE); 
+    glClearDepth(100.0f); 
+    glEnable(GL_DEPTH_TEST);  
     glEnable(GL_COLOR_MATERIAL);
-    glDepthFunc(GL_LEQUAL);  ///*******
-    glDepthRange(50,-50);    ///*******
+    glDepthFunc(GL_LEQUAL); 
+    glDepthRange(50,-50);    
 
     /*glLightfv (GL_LIGHT0, GL_DIFFUSE, difusa);
     glLightfv (GL_LIGHT0, GL_POSITION, position);
@@ -57,7 +57,6 @@ void initflat(void){
     glEnable(GL_COLOR_MATERIAL);
     glDepthMask(GL_TRUE);
 }
-//Arrumar projetil para um quadrado
 
 void display(void){
 
@@ -69,7 +68,7 @@ void display(void){
     glScalef (1.0, 1.0, 1.0);
 
     if(TYPE_DISPLAY == 1){
-        gluLookAt (camera_x,camera_y,camera_z, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+        gluLookAt (cam_x,cam_y,cam_z, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
     }
     else{
         glRotatef(theta,0.0,1.0,0.0);
@@ -86,7 +85,7 @@ void display(void){
 void glut_create(int argc, char **argv){
     glutInit(&argc, argv);
 
-    glutInitWindowSize (HEIGHT_GLUT, WIDHT_GLUT);     //SIZE WINDOW
+    glutInitWindowSize (HEIGHT_GLUT, WIDHT_GLUT);     
 
     glutInitWindowPosition (100, 100);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
@@ -109,18 +108,18 @@ void glut_create(int argc, char **argv){
 void get_key(unsigned char key, int x, int y){
 
     float speed = 5;
-    if(key == 'a'){ // esquerda
-        camera_x -= speed;
-    }else if(key == 'w'){ // cima
-        camera_y += speed;
-    }else if(key == 'd'){ //direita
-        camera_x += speed;
-    }else if(key == 's'){ //baixo
-        camera_y -= speed;
-    }else if(key == 'q'){ // dentro
-        camera_z += speed;
-    }else if(key == 'e'){ // fora
-        camera_z -= speed;
+    if(key == 'a'){ 
+        cam_x -= speed;
+    }else if(key == 'w'){ 
+        cam_y += speed;
+    }else if(key == 'd'){ 
+        cam_x += speed;
+    }else if(key == 's'){ 
+        cam_y -= speed;
+    }else if(key == 'q'){ 
+        cam_z += speed;
+    }else if(key == 'e'){ 
+        cam_z -= speed;
     } 
     glutPostRedisplay();
 }

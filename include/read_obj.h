@@ -12,17 +12,17 @@ using namespace std;
 #define MIN 0
 #define MAX 1
 
-extern string caminho_obj;
-extern string caminho_img;
-extern string caminho_out_img;
+extern string path_obj;
+extern string path_img;
+extern string path_out_img;
 
-typedef struct V{           //struct para os vertices dos objetos 3D
+typedef struct V{
     float x;
     float y;
     float z;
 }V;
 
-typedef struct F{           //Struct para as faces dos objetos 3D
+typedef struct F{
     int p0;
     int p1;
     int p2;

@@ -155,7 +155,7 @@ void Image::paint_recursivo(int x,int y,int r2,int g2,int b2,int r,int g,int b){
 
 void Image::mask(string filename,int r,int g, int b){
     ofstream arq;
-    arq.open(caminho_out_img + filename);
+    arq.open(path_out_img + filename);
     arq << "P3\n" << this->width << " " << this->height << endl << this->maxcolor << endl;
 
     for(int i=0;i<this->height;i++){
@@ -174,7 +174,7 @@ void Image::mask(string filename,int r,int g, int b){
 
 void Image::stamping(string stamping_file, int x, int y){
     Image* aux = new Image();
-    aux->load_image(caminho_img + stamping_file);
+    aux->load_image(path_img + stamping_file);
     int k=0;
     int l=0;
     for(int i=x;i<this->height;i++){

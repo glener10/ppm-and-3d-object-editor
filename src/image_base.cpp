@@ -9,7 +9,6 @@ Image::~Image(){
         free(this->data->green[i]);
         free(this->data->blue[i]);
     }
-    //free(this->data);
 }
 
 void Image::aloca_pixel(){
@@ -72,7 +71,7 @@ void Image::load_image(string input){
 
 void Image::save_image(string output){
     ofstream arq;
-    arq.open(caminho_out_img + output);
+    arq.open(path_out_img + output);
     arq << "P3\n" << this->width << " " << this->height << endl << this->maxcolor << endl;
     for(int i=0;i<this->height;i++){
         for(int j=0;j<this->width;j++){

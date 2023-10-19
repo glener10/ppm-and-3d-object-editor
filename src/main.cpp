@@ -20,14 +20,13 @@ using namespace std;
 #define MAX_CIRCLE_RADIUS 30
 
 
-//Controlar camera dinamica
-GLfloat camera_x = 0;
-GLfloat camera_y = 0;
-GLfloat camera_z = 35;
+GLfloat cam_x = 0;
+GLfloat cam_y = 0;
+GLfloat cam_z = 35;
 
-string caminho_obj = ".././objects_3d/";
-string caminho_img = ".././img/";
-string caminho_out_img = ".././img_generate/";
+string path_obj = ".././objects_3d/";
+string path_img = ".././img/";
+string path_out_img = ".././img_generate/";
 
 float theta=0;
 
@@ -62,7 +61,7 @@ int main(int argc,char **argv){
                 else{
                     cout << endl << "Output File name: ";
                     cin >> aux_name;
-                    imagem -> save_image(caminho_out_img + aux_name);
+                    imagem -> save_image(path_out_img + aux_name);
                 }
             break;
 
@@ -86,7 +85,7 @@ int main(int argc,char **argv){
                 cout << endl << "Name of inputfile (It must be in the 'img' folder): ";
                 cin >> aux_name;
                 cout << endl << "Loading image...";
-                imagem -> load_image (caminho_img + aux_name);
+                imagem -> load_image (path_img + aux_name);
                 exist_image = true;
                 cout << endl << "Done!";
             break;
@@ -104,7 +103,7 @@ int main(int argc,char **argv){
 
                         cout << endl << "Object name (It must be in the 'objects_3d' folder): ";
                         cin >> aux_name;
-                        if(arq_verification(caminho_obj + aux_name) != 1){
+                        if(arq_verification(path_obj + aux_name) != 1){
                             break;
                         }
                         else{
@@ -125,7 +124,7 @@ int main(int argc,char **argv){
                             /*cout << "Centro Z: ";
                             cin >> center_z;*/
 
-                            aux_create = new Object(caminho_obj + aux_name,theta_x,theta_y,theta_z,scale,center_x,center_y,0,aux_focal_distance);
+                            aux_create = new Object(path_obj + aux_name,theta_x,theta_y,theta_z,scale,center_x,center_y,0,aux_focal_distance);
                             Objs.push_back(aux_create);
 
                             cout << endl << "press (1) to add more objects: ";
@@ -147,12 +146,12 @@ int main(int argc,char **argv){
                     cout << endl << "Script Format: " << endl << "name.obj scale centerX centerY ThetaX ThetaY ThetaZ" << endl;
                     cout << endl << "Script name (It must be in the 'objects_3d' folder): ";
                     cin >> aux_name;
-                    if(arq_verification(caminho_obj + aux_name) != 1){
+                    if(arq_verification(path_obj + aux_name) != 1){
                         break;
                     }
                     else{
                         cout << endl << "Reading Script file...";
-                        aux_create->td_script(caminho_obj + aux_name);
+                        aux_create->td_script(path_obj + aux_name);
                         imagem->three_dimension();
                         cout << endl << "Done!";
                     }
@@ -165,7 +164,7 @@ int main(int argc,char **argv){
                 while(option == 1){
                     cout << endl << "Object name (It must be in the 'objects_3d' folder): ";
                     cin >> aux_name;
-                    if(arq_verification(caminho_obj + aux_name) != 1){
+                    if(arq_verification(path_obj + aux_name) != 1){
                         break;
                     }
                     else{
@@ -182,7 +181,7 @@ int main(int argc,char **argv){
                         cout << "Centro Y: ";
                         cin >> center_y;
 
-                        aux_create = new Object(caminho_obj + aux_name,theta_x,theta_y,theta_z,scale,center_x,center_y,0,1);
+                        aux_create = new Object(path_obj + aux_name,theta_x,theta_y,theta_z,scale,center_x,center_y,0,1);
                         Objs.push_back(aux_create);
 
                         cout << endl << "press (1) to add more objects: ";
@@ -201,12 +200,12 @@ int main(int argc,char **argv){
                 cout << endl << "Script Format: " << endl << "name.obj scale centerX centerY ThetaX ThetaY ThetaZ" << endl;
                 cout << endl << "Script name (It must be in the 'objects_3d' folder): ";
                 cin >> aux_name;
-                if(arq_verification(caminho_obj + aux_name) != 1){
+                if(arq_verification(path_obj + aux_name) != 1){
                     break;
                 }
                 else{
                     cout << endl << "Reading Script file...";
-                    aux_create->td_script(caminho_obj + aux_name);
+                    aux_create->td_script(path_obj + aux_name);
                     cout << endl << "Done!";
                     cout << endl << "Using the keys:" << endl;
                     cout << "W - Up\nS - Down\nA - Left\nD - Right\nQ - Depth Within\nE - Depht off\n";
@@ -241,7 +240,7 @@ int main(int argc,char **argv){
                     cout << endl << "Position Y to stamping: ";
                     cin >> aux_y;
                     cout << endl << "Stamping...";
-                    imagem->stamping(caminho_img + aux_name,aux_x,aux_y);
+                    imagem->stamping(path_img + aux_name,aux_x,aux_y);
                     cout << endl << "Done!";
                 }
             break;
@@ -261,7 +260,7 @@ int main(int argc,char **argv){
                     cout << endl << "B: ";
                     cin >> aux_b;
                     cout << endl << "Stamping...";
-                    imagem->mask(caminho_out_img + aux_name,aux_r,aux_g,aux_b);
+                    imagem->mask(path_out_img + aux_name,aux_r,aux_g,aux_b);
                     cout << endl << "Done!";
                 }
             break;

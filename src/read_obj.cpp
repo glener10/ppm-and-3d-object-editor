@@ -8,7 +8,7 @@ Object::Object(){}
 Object::Object(string input,float theta_x,float theta_y,float theta_z, float Scale, float Center_x, float Center_y, float Center_z, float focal_distance){
     this->number_faces_vertices(input);
     this->read_file(input);
-    //this->ordena_f();     // O(n^2)
+
     if(theta_x > 0){
         this->rotation_x(theta_x);
     }
@@ -78,7 +78,7 @@ void Object::read_file(string input){         //Le arquivo e salva no vet da str
     arq.close();
 }
 
-float Object::media_Z(float a,float b,float c){     //Retorna a media do valor Z de uma face
+float Object::media_Z(float a,float b,float c){    
     return (a+b+c)/3;
 }
 
@@ -183,7 +183,7 @@ void Object::td_script(string input){
         arq >>theta_x;
         arq >> theta_y;
         arq >> theta_z;
-        aux_create = new Object(caminho_obj + aux_name,theta_x,theta_y,theta_z,scale,center_x,center_y,0,1);
+        aux_create = new Object(path_obj + aux_name,theta_x,theta_y,theta_z,scale,center_x,center_y,0,1);
         Objs.push_back(aux_create);
     }
     arq.close();

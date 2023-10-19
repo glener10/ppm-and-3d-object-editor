@@ -22,11 +22,9 @@ extern int TYPE_DISPLAY;
 
 using namespace std;
 
-
-//Controle de camera dinamica
-extern GLfloat camera_x;
-extern GLfloat camera_y;
-extern GLfloat camera_z;
+extern GLfloat cam_x;
+extern GLfloat cam_y;
+extern GLfloat cam_z;
 
 
 void display(void);

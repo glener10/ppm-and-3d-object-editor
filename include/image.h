@@ -11,9 +11,9 @@
 
 using namespace std;
 
-extern string caminho_obj;
-extern string caminho_img;
-extern string caminho_out_img;
+extern string path_obj;
+extern string path_img;
+extern string path_out_img;
 
 typedef struct Pixel{
     int **red;
@@ -32,13 +32,11 @@ class Image{
         ~Image();
 
 
-        //Create, Loading image, Save and alocation
         void create_image(int height, int width, int maxcolor);       
         void load_image(string input);
         void aloca_pixel();                                
         void save_image(string output);
 
-        //Functions
         void gradient();
         void negative_image();
         void blur();
@@ -50,10 +48,8 @@ class Image{
         void drawCircle(int xc, int yc, int x, int y,   int r,int g,int b);
         void circle(int xc,int yc,int raio,int r,int g,int b);
 
-        //
         void three_dimension();
 
-        //Auxilliary
         void get_dimensions();
         int put_pixel(int i, int j, int r,int g, int b);
         int getred(int i, int j);
